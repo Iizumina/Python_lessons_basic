@@ -93,6 +93,7 @@ class Trapetzium ():
         else:
             return (' - трапеция не равнобедренная.')
 
+
 trap_coord = Trapetzium (3, 5, 6, 5, 8, 1, 1, 1)
 
 print('Длины строн равнобедренной трапеции равны:\n АВ = {}\n ВС = {}\n СD = {}\n DA = {}'.format(trap_coord.AB, trap_coord.BC, trap_coord.CD, trap_coord.DA))
