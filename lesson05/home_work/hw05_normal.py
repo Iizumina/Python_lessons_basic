@@ -13,3 +13,48 @@
 # Для решения данной задачи используйте алгоритмы из задания easy,
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
+
+if __name__ == '__main__':
+    pass
+import os
+import hw05_easy_c
+
+def change_dir(path):
+    try:
+        os.chdir(path)
+        return (os.path.abspath(path) + '\n Успешно перешли в папку: {}'.format(path))
+    except FileNotFoundError:
+        return ('{} - папки не существует'.format(path))
+
+def start ():
+    answer =''
+    while True:
+        answer = input('_'*30 + '_\n'
+                       'Выберите пункт меню:\n'
+                       '1. Перейти в папку\n'
+                       '2. Поcмотреть содержимое текущей папки\n'
+                       '3. Удалить папку\n'
+                       '4. Создать папку\n')
+
+        if answer == '1':
+            path_name = input('Укажите папку для перехода: ')
+            print(change_dir(path_name))
+            print('*' * 30)
+        elif answer == '2':
+            content = os.listdir()
+            print('Вы находитесь: ' + os.getcwd())
+            print('*' * 30)
+            for n in content:
+                print(n)
+
+        elif answer == '3':
+            name = input('Введите имя удаляемой папки: ')
+            hw05_easy_c.rm_dir(name)
+            print('*' * 30)
+        elif answer == '4':
+            name = input('Введите имя новой папки: ')
+            hw05_easy_c.mk_dir(name)
+            print('*' * 30)
+
+if __name__ == '__main__':
+    start()
