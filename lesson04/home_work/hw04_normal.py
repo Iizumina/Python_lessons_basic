@@ -26,11 +26,11 @@ line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO' \
 
 # 1 Способ
 # # print(ord('A'), ord('Z'))
-# AlfabetAZ = list(map(lambda x: chr(x), list(range(65, 91))))  # Алфавит A-Z(заглавные)
+# alfabetAZ = list(map(lambda x: chr(x), list(range(65, 91))))  # Алфавит A-Z(заглавные)
 # lst1 = list(line) # - создаем список из текста (побуквенно)
 # # print(lst1)
 # for i, el in enumerate(lst1[:]):
-#        for el2 in AlfabetAZ:
+#        for el2 in alfabetAZ:
 #               if el == el2:
 #                      lst1[i] = ' ' # - Заменяем все заглавные буквы на пробелы
 #
