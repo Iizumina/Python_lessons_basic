@@ -8,20 +8,8 @@
 
 # код пишем тут...
 ```
-import random
-maxNumber = input('Введите максимальное целое число  ')
-randomNumber = round(random.randrange(0, int(maxNumber), 1)) # - round - округление числа
-print('Задуманное число = ', randomNumber) # - выводит задуманное число
-howSimbol = int(len(str(randomNumber))) # - определяет длину числа(количество символов)
 
 
-n = 0 # - нулевое значение количества повторов цикла
-while n < round(howSimbol):
-    i = round(random.randrange(0, howSimbol, 1)) # - рандомно определяет позицию цифры в числе
-    b = i + 1 # - визуально определяет разрядность числа (в обратном порядке)
-    print('Позиция № ', b , ' цифра ', str(randomNumber)[i])
-    n = n + 1 # - считает круги цикла
-```
 
 # print(randomNumber[i])
 #     break
